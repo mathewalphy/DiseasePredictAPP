@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pickle
 st.title("Disease Prediction App")
-model = pickle.load(open('.models/diseasemodel.pkl','rb'))
+model = pickle.load(open('./models/diseasemodel.pkl','rb'))
 data_dict = pickle.load(open('./models/disease_dict.pkl','rb'))
 
 symptoms = st.multiselect("Symptoms: ", list(data_dict['symptom_index'].keys()))
